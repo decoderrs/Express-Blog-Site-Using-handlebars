@@ -1,0 +1,48 @@
+<style>
+    #Ggf {
+        text-decoration: none;
+        color: aliceblue;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #sub_heading {
+        text-decoration: none;
+        color: black;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #menu {
+        background-color: #008000;
+        margin-bottom: none;
+    }
+</style>
+<table class="table table-success table-bordered border-light">
+    <tr class="table-success">
+        {{#each text1}}
+        <td id="menu" class="table-success">
+            <a id="Ggf" class="sub-article" href="/blogpost/{{this.slug}}">{{this.title}}</a>
+        </td>
+        {{/each}}
+    </tr>
+</table>
+</div>
+<div class="row px-3">
+    <div class="col-2">
+        <div class="row justify-itself-center">
+            {{#each Blogs}}
+            <a id="sub_heading" class="sub-article" href="/blogpost/{{this.slug}}/{{this.sub_title}}">
+                {{this.sub_title}}
+            </a>
+            <hr size="5" width="100%" color="grey" style="margin-top: 1rem;">
+            <br />
+            {{/each}}
+        </div>
+    </div>
+    <div class="col-10">
+        <h1>Welcome to {{ title }}</h1>
+        <p>{{ blogs.description }}</p>
+    </div>
+</div>
